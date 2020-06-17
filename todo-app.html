@@ -20,28 +20,67 @@
     flex-direction: column;
     align-content: center;
     text-align: center;
-    
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: rgb(20, 88, 66);
+    color: rgb(94, 197, 164);
+    border:none;
     
   }
 
   input {
     height: 50px;
     font-size: 25px;
-    border-color: rgb(20, 88, 66);
+    background-color: rgba(94, 197, 164, 0.425);
     text-align: center;
+    border: none;
+    border-radius: 5px;
   }
+  input:hover {
+    background-color: rgb(201, 206, 201);
+  }
+  
   
 
   #detail {
     display: flex;
-    margin-top: 30px;
     justify-content: space-around;
+    align-items: center;
+    background-color: khaki;
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(94, 197, 164);
 
   }
 
-  
+  .button-layout {
+    margin-left: 320px;
+  }
+
+  #status, #remove {
+    background-color: rgb(94, 197, 164);
+    border-radius: 10px;
+    border-style: hidden;
+    height: 35px;
+    width: 80px;
+    font-size: 20px;
+    color:white;
+  }
+
+  #status:hover, #remove:hover {
+    background-color: rgba(167, 163, 163, 0.692);
+  }
+
+  #to-do {
+    width: 80%;
+  }
+
+  span{
+    font-size: 40px;
+  }
 
   
 
@@ -51,12 +90,16 @@
   <div class="container">
 
   <form type="submit">
-    <label for="to-do">TO DO</label>
+    <label for="to-do"><span>TO DO</apan></label>
     <h1 class="count"></h1>
     <input name="to-do" id="to-do" placeholder="add a todo!"> 
   </form>
     <div class="list"></div>
   </div>
+
+  <div id="myProgress">
+  <div id="myBar"></div>
+</div>
   <script src="todo-app.js"></script>
 </body>
 

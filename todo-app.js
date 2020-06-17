@@ -44,19 +44,28 @@ form.addEventListener("submit", (event) => {
   list.insertAdjacentHTML(
     "afterend",
     `<div id="detail">${GetUserInput()}
-    <button id="status" type="submit"> complete </button> </div>`
+    <div class="button-layout">
+    <button id="status">Doing</button> 
+    <button id="remove"> Delete </button></div> </div>`
   );
   form.reset();
 
   const detail = document.querySelector("#detail");
   const status = document.querySelector("#status");
+  const remove = document.querySelector("#remove");
 
   status.addEventListener("click", (event) => {
-    detail.remove();
+    
+    status.innerText = 'Done';
+    status.style.color = 'orange';
     let index = detail.innerText[0];
     count.splice(index,1);
     countDisplay.innerHTML = count.length;
   });
+
+  remove.addEventListener('click',(event)=> {
+    detail.remove();
+  })
 });
 
 
