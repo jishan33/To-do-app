@@ -24,9 +24,8 @@ const countDisplay = document.querySelector(".count");
 const form = document.querySelector("form");
 const list = document.querySelector(".list");
 
-let total = 0;
 let count = [];
-
+let total = 0;
 countDisplay.innerHTML = total;
 
 
@@ -35,9 +34,10 @@ function GetUserInput() {
   count.push(userInput);
   total = count.length;
   countDisplay.innerHTML = total;
-
+ 
   return userInput;
 }
+ 
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -53,8 +53,14 @@ form.addEventListener("submit", (event) => {
 
   status.addEventListener("click", (event) => {
     detail.remove();
+    let index = detail.innerText[0];
+    count.splice(index,1);
+    countDisplay.innerHTML = count.length;
   });
 });
+
+
+
 
 // form.style.color = 'green';
 // form.style.textAlign = 'center';
