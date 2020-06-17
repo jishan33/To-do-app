@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px; 
+  }
+
+  form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    
+    font-weight: bold;
+    color: rgb(20, 88, 66);
+    
+  }
+
+  input {
+    height: 50px;
+    font-size: 25px;
+    border-color: rgb(20, 88, 66);
+    text-align: center;
+  }
+  
+
+  #detail {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+
+  }
+
+  
+
+  
+
+</style>
+
+<body>
+  <div class="container">
+
+  <form type="submit">
+    <label for="to-do">TO DO</label>
+    <h1 class="count"></h1>
+    <input name="to-do" id="to-do" placeholder="add a todo!"> 
+  </form>
+    <div class="list"></div>
+  </div>
+  <script src="todo-app.js"></script>
+</body>
+
+</html>
